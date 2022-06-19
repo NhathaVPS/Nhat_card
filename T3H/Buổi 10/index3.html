@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        DOM trong html 
+        select theo class name 
+    </pre>
+
+    <div class="classA">ClassA</div>
+    <div class="classB">ClassB</div>
+    <div class="classA">ClassA</div>
+    <div class="classB">ClassB</div>
+
+    <script>
+
+        var demoA = document.getElementsByClassName('classA');
+        console.log(demoA); // Trả về HTMLCollection(2)
+
+        demoA[0].style.color = "orange";   //Truy cập vào để thay đổi style CSS (dùng cú pháp selector.style.cssProperty)
+
+        //Chú ý thuộc tính nhiều hơn 2 chữ thì chúng ta bỏ đi dấu - ở giữa và viết hoa ký tự đầu chữ thứ 2
+        //Ví dụ: background-color === backgroundColor
+
+        demoA[1].style.backgroundColor = 'green';
+        demoA[1].style.fontSize = '45px';
+
+        //thử viết cách không gán vào biến khi sử dụng getElementsByClassName
+        document.getElementsByClassName("classB")[1].style.fontSize = '100px';
+    </script>
+</body>
+</html>

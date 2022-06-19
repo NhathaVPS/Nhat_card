@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        cách 3 gắn sự kiện addEventListener
+        selectorJS.addEventListener("tên sự kiện", myFunction);
+    </pre>
+
+    <button id="btn1">click me 1</button>
+    <button id="btn2">click me 2</button>
+
+    <input type="text" name="input1" id="input1">
+
+    <p id="inner1" style="color:rgb(72, 225, 6);"></p>
+
+    <script>
+
+        // chú ý viết tên event là click thay vì onclick
+        //Viết nút 1
+        document.getElementById("btn1").addEventListener("click", function(){
+            alert("Click me 1 theo cách 3");
+        } )
+        
+        //Viết nút 2
+        var cach3 = function(){
+            alert('Click me 2 theo cách 3');
+        }
+        document.getElementById('btn2').addEventListener('click', cach3);
+
+        //Viết input
+        document.getElementById('input1').addEventListener('change', function(){
+            var value1 = document.getElementById('input1').value;
+            document.getElementById('inner1').innerHTML = value1;
+        })
+    </script>
+</body>
+</html>

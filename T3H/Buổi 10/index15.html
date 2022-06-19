@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #main{
+            padding: 20px;
+            border: 5px double pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. beforebegin -->
+<div id="main">
+    <!-- afterbegin -->
+    <h1 id="title">Hello World!</h1>
+    <!-- beforeend -->
+</div>
+<!-- afterend -->
+ 
+<script>
+// Chọn thẻ có id là main
+var mainDiv = document.getElementById("main");
+ 
+// Thêm 1 thẻ html vào phía trước bên ngoài html được chọn
+mainDiv.insertAdjacentHTML('beforebegin', '<p>Phía trước bên ngoài thẻ</p>');
+ 
+// thêm vào bên trong thẻ mục tiêu nhưng ở phía trước
+mainDiv.insertAdjacentHTML('afterbegin', '<p>Thêm vào bên trong thẻ mục tiêu phía trước</p>');
+ 
+// thêm vào bên trong thẻ mục tiêu nhưng ở phía sau
+mainDiv.insertAdjacentHTML('beforeend', '<p>Thêm vào bên trong thẻ mục tiêu phía sau</p>');
+ 
+// Thêm 1 thẻ html vào phía sau bên ngoài html được chọn
+mainDiv.insertAdjacentHTML('afterend', '<p>thêm 1 thẻ html vào phía sau bên ngoài thẻ html được chọn</p>'); 
+</script>
+</body>
+</html>

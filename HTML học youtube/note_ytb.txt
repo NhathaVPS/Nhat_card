@@ -1,0 +1,197 @@
+Bài 2
+1)  Thẻ tạo nội dung dạng danh sách
+    <ol>
+        <li> : nội dung danh sách     (li là viết tắt của list)
+    </ol>
+______________________________________________
+
+2)  Click vào link ảnh chuyển sang liên kết khác. Có tọa độ của ảnh
+    <img src="đường dẫn tới hình ảnh" usemap="# tên map" >
+    <map name="tên map">
+        <erea shape="rect" coords= "x1, y1, x2, y2" href ="đường link liên kết" /> 
+        <erea shape="circle" coords= "x1, y1, r" href ="đường link liên kết" /> 
+                (rect là dạng hình chữ nhật)
+                (circle là dạng hình tròn)
+    </map>
+______________________________________________
+
+Bài 3
+1)  Trình bày dữ liệu dạng bảng (hàng và cột)
+    <table>
+        <tr>
+            <td> Hàng 1 - Cột 1 </td>
+            <td> Hàng 1 - Cột 2 </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td> Hàng 2 - Cột 1 </td>
+            <td> Hàng 2 - Cột 2 </td>
+        </tr>
+    </table>
+                (tr - đại diện cho hàng)
+                (td đại diện cho cột)
+______________________________________________
+
+2) Trình bày dữ liệu dạng bảng và cột (cột và hàng chia không đều)
+<table border="1" cellpadding="10" cellspacing="1" >
+    <tr>
+        <td colspan="2"> H1 C1</td>
+        <td> H1 C2</td>
+    </tr>
+    <tr>
+        <td>H2 C1</td>
+        <td>H2 C2</td>
+        <td>H2 C3</td>
+    </tr>
+    <tr>
+        <td rowspan="2"> H3 C1</td>
+        <td> H3 C2</td>
+        <td> H3 C2</td>
+    </tr>
+    <tr>
+        <td>H4 C1</td>
+        <td>H4 C2</td>
+    </tr>
+</table>
+            (border= "1" - Độ dày đường line là 1 )
+            (cellpadding = "10"  - Khoảng cách từ đường line đến nội dung là 10 pixcel)
+            (cellspacing = "1"   - Độ dày đường biên bằng 1)
+______________________________________________
+
+3) Chèn video / âm thanh
+<video autoplay = "1" controls="controls">
+    <source src = " Đường-dẫn-file-video.mp4" Type = "video/mp4" />
+</video>
+<audio autoplay = "1" controls="controls">
+    <source src = " Đường-dẫn-file-audio.mp3" Type = "audio/mpeg" />
+</audio>
+            (thêm autoplay để xuất hiện các tùy chỉnh trên video)
+            (mp4 - video/mp4)
+            (ogg - video/ogg)
+            (mp3 - audio/mpeg)
+            (wav - audio/wav)
+______________________________________________
+
+Bài 4
+1) Các thẻ trình bày biểu mẫu (FORM)
+<FORM>
+    <p> Đây là TEXTBOX <br/>
+        <input Type="text" /> 
+    </p>
+    <p>
+        Đây là CHECKBOX <br/>
+        <input type="CHECKBOX" />
+    </p>
+    <p>
+        Đây là RADIOCHECKBOX <br/>
+        <input type="radio" name="gioitinh" checked="checked"/> Nam   <br/>
+        <input type="radio" name="gioitinh" /> Nữ       
+    </p>
+    <p>
+        Đây là nút chọn FILE <br/>
+        <input type="file" />
+    </p>
+    <p>
+        Đây là danh sách sổ xuống </br>
+        <Select>
+            <optgroup label="Nhóm 1">
+                <option> giá trị 1 </option>
+                <option> giá trị 2 </option>
+                <option> giá trị 3 </option>
+            </optgroup>    
+            <optgroup label="Nhóm 2">
+                <option> giá trị 4 </option>
+                <option> giá trị 5 </option>
+                <option> giá trị 6 </option>
+            </optgroup>    
+        </Select>         
+    </p>
+    <p> <textarea cols="100" row="200"> </textarea>
+</FORM>
+                    (ở phần radio. Có lệnh checked ở đâu thì lựa chọn đó ưu tiên hiện đầu )
+                    (otpgroup label tức là tạo thêm nhóm của lựa chọn)
+                    (cols là chiều x, row - chiều y)
+______________________________________________
+
+2) Giới thiệu về IFRAME
+- Là kỹ thuật nhúng (EMBED) một nội dung HTML khác vào HTML hiện tại. IFRAME không
+trực tiếp tạo ra nội dung mà nó sẽ tạo ra một cái khung chứa nội dung HTML từ một đường dẫn. 
+
+<IFRAME src="đường dẫn" width="500" height="100" frameboder="0"> </IFRAME>
+______________________________________________
+
+3) Các thẻ dữ liệu đặc biệt div, label, span, canvas,...
+    Những thẻ HTML này được bổ sung kể từ phiên bản tân tiến hơn của HTML 
+nhất là kể từ khi CSS được sử dụng vào việc trình bày dữ liệu cho HTML 
+    Các thẻ này không trực tiếp có ý nghĩa về dữ liệu như <p> hay thẻ <i>...
+Chúng mang ý nghĩa định hình dữ liệu, nói một cách dễ hiểu là nó tạo cấu
+trấu cho dữ liệu. Việc trình bày dữ liệu ra sao trên cái nền cấu trúc đó 
+sẽ do một bộ phận khác quyết định mà bạn sẽ học ở phần 2 đó là CSS. 
+______________________________________________
+
+Bài 5
+Đây là bài học mang tính trừu tượng. Cung cấp cái nhìn đầu tiên cho các bạn
+về HTML5. Nội dung này chủ yếu giúp các bạn loại bỏ thói quen code bừa bãi
+không theo nguyên tắc
+1) Hiểu về HTML5
+2) Khái niệm chuẩn XLM khi viết code HTML
+    1. Có thẻ mở phải có thẻ đóng. Nếu thẻ đơn phải có dấu đóng thẻ đơn /> ở cuối
+    2. Nếu có nhiều thẻ lồng nhau, thẻ nào mở sau thì phải được đóng trước
+    3. Toàn bộ tên thẻ, tên thuộc tính thẻ đều phải viết thường
+    4. Toàn bộ giá trị thuộc tính đều phải đặt trong dấu nháy kép "..."
+    5. Không được phép sử dụng thuộc tính theo phong cách rút gọn
+    6. Có thể tự ý đặt thêm tên thuộc tính tùy thích để lưu trữ những giá
+       trị tùy thích, miễn là nó tuân thủ theo nguyên tắc 3,4,5
+______________________________________________
+
+Bài 6
+Đây là bài học chuẩn bị kiến thức cơ sở cho các bài học về javascript sau này.
+Và sẽ còn được nhắc lại một lần nữa
+1) Làm quen với khái niệm HTML DOM
+2) Những cách xác định DOM trong tài liệu HTML
+3) Mô hình đồ họa hóa về DOM
+
+1. DOM là viết tắt của Document Object Model. Là một dạng mô hình
+"đối tượng hóa" các thẻ HTML trong tài liệu HTML nhằm mục đích có
+thẻ dễ dàng truy cập và tác động đến nội dung cũng như thuộc tính
+của các thẻ HTML.
+
+HTML DOM hoạt động bằng cách xen mỗi thẻ HTML là một đối tượng
+thực thể. Rồi từ đó truy xuất và tác động đến chúng.
+
+Tại sao cần HTML DOM?
+Mô hình này cung cấp cho một ngôn ngữ SCRIPT phía CLIENT
+(phổ biến là javascript) có thể dễ dàng tác động đến các thẻ HTML khi cần thiết
+
+2. Những cách xác định DOM trong tài liệu HTML 
+    - Xác định bằng tên thẻ HTML như p, img, b,...
+    - Xác định bằng thuộc tính id="..."
+    - Xác định bằng thuộc tính class="..."
+    - Xác định bằng sự kết hợp của 3 yếu tố trên
+
+3. Mô hình hóa về DOM
+Cách nhìn theo phương pháp đồ họa hóa về DOM là cách biểu diễn dạng cây
+<p>
+    <b>
+    <i>
+    <h>
+        <img>
+        <u>
+
+Các thẻ này được gọi là các NOTE, các NOTE được chia làm hai dạng chính
+PAREN NOTE (note mẹ) - là thẻ P vì nó bao bọc các thẻ còn lại, hoặc h vì nó bao bọc img, u
+CHILD NOTE (note con) - b,i,h là paren của p hay img, u là paren của h 
+______________________________________________
+
+PHẦN 2: LẬP TRÌNH VỚI CSS
+Bài 1
+1) Định nghĩa về CSS
+2) Ví dụ về CSS
+3) Những cách khai báo CSS
+4) Selector đơn giản
+5) Một số thuộc tính CSS đơn giản
+
+
+
+

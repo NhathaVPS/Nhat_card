@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Bài 1: cho array
+        // sử dụng map hoặc filter để in ra các số chẵn trong mảng
+        //điều kiện thì dùng filter, phép tính thì dùng map
+        var arr = [1,5,7,8,9,15];
+        console.log(arr);
+        var newFilter = arr.filter(function(item){
+            return item >= 5;
+        })
+        console.log(newFilter);
+
+        var newMap = newFilter.map(function(item){
+            return (item + 1)  ;
+        })
+        console.log(newMap);
+
+        var newSlice = arr.slice(3, arr.length);
+        console.log(newSlice);
+
+        //DÙng splice để xóa 1 phần tử trong mảng
+        var newSplice = arr.splice(0, 1); // từ bị trí 0 xóa đi 1ptu 
+        console.log(newSplice); //trả về mảng bị xóa
+        console.log(arr); //trả về mảng ban đầu khi bị xóa 
+
+        //thêm phần tử vào cuối mảng
+        var newPush = arr.push(3,3,3,3,3,3);
+        console.log(newPush);
+
+        var arr2 = [1,8,5,2,7,6,9,2,6];
+        //dùng sort để sắp xếp thứ tự tăng dần
+        var newSort = arr2.sort(function(item1, item2){
+            if(item1 < item2){
+                return -1
+            }
+        })
+        console.log(newSort);
+
+        //Bài 3: 
+        var persons = [{
+                name: 'Trung',
+                class: 'Nodemy01',
+                dateJoin: '05-02-2020',
+                age: 20
+            },{
+                name: 'Phong',
+                class: 'Nodemy01',
+                dateJoin: '06-01-2020',
+                age: 19
+            }, {
+                name: 'Nam',
+                class: 'Nodemy02',
+                dateJoin: '25-01-2020',
+                age: 20
+        }]
+
+        var sort2 = persons.sort(function(item1, item2){
+            if(item1.age < item2.age){
+                return -1;
+            }
+        })
+        console.log(sort2);
+
+        var sort3 = persons.sort(function(item1, item2){
+            if(item1.dateJoin < item2.dateJoin){ //vẫn nhận dạng được số nào lớn hơn mà không cần đổi qua kiểu number
+                return -1;
+            }
+        })
+        console.log(sort3);
+        console.log(typeof persons[0].dateJoin ); //ktra kiểu dữ liệu
+
+        //dùng .sort để sắp xếp mảng theo ngày tháng tham gia của học viên
+        //Đổi kiểu String sang object
+        var stringSangObject = function(item){
+            var catChuoi =  item.split('-'); // trả về [25,01,2020] 
+            var newObject = catChuoi[2] + '-' + catChuoi[1] + '-' + catChuoi[0];
+            return new Date(newObject);
+        }
+        var timeJoinNew = persons.sort(function(item1, item2){
+            var date1 = stringSangObject(item1.dateJoin); //stringSangObject là function nên phải truyền có ()
+            var date2 = stringSangObject(item2.dateJoin);
+            if(date1 > date2){
+                return 1
+            }
+            if(date1 < date2){
+                return -1
+            }
+            if(date1 == date2){
+                return 0
+            }
+        });
+        console.log(timeJoinNew);
+        
+        
+        
+    </script>
+</body>
+</html>

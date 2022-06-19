@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JS cơ bản, BTVN
+        //Bài 1:  
+        var arr = [1,5,7,8,9,15,8];
+        //in ra các số chẵn, lẻ của mảng
+        var chan, le;
+        for (var i=0 ; i<arr.length; i++){
+            var chia = arr[i] %2;
+            if(chia == 0){
+                document.write('Số chẵn thứ: ' + (i+1) + " Là: " + arr[i] + "<br>");
+            }else{
+                document.write('Số lẻ thứ: ' + (i+1) + " Là: " + arr[i] + "<br>");
+            } 
+        }
+
+        //In ra các số lớn hơn hoặc bằng 5 của mảng
+        for (var i=0 ; i<arr.length; i++){
+            var ssvoi5 = arr[i] - 5; 
+            if(ssvoi5 == 0){
+                document.write('Số bằng 5 ở vị trí số: ' + (i+1) + " Là: " + arr[i] + "<br>");
+            }else if(ssvoi5 > 0){
+                document.write('Số lớn hơn 5 ở vị trí: ' + (i+1) + " Là: " + arr[i] + "<br>");
+            }
+            
+        }
+
+        //tổng các số chia hết cho 5
+        var tong = 0;
+        for(var j=0 ; j<arr.length; j++){
+            var tongchia5 = arr[j]%5;
+            if(tongchia5 == 0){
+                var kq = tong += arr[j];
+                if(j>1){
+                document.write("Tổng các số chia hết cho 5: " + kq + "<br>");
+                }
+            }
+            
+        }
+
+        for(var i=0 ; i<3; i++){
+            var tich3so;
+            var kq2 = tich3so *= arr[i];
+            if(i=2){
+                document.write('Tích 3 số đầu: ' + kq +'<br>');
+            }
+        }
+
+        var tong3so_cuoi = arr[arr.length-1]*arr[arr.length-2]*arr[arr.length-3];
+        document.write(tong3so_cuoi + 'Tích 3 số cuối' + '<br>');
+
+        //Bài 2: Tính diện tích hình tròn
+        function dienTich(r){
+            dienTich = 3.14*r*r;
+            return document.write('Diện tích hình tròn bán kính 5: ' + dienTich + '<br>');
+        }
+        dienTich(5);
+
+        //Bài 3: Chủ đề Object
+        var obj = {
+            firstName : 'Đỗ',
+            lastName : 'Hào',
+        }
+        document.write('In ra màn hình: ' + obj.firstName + ' ' + obj.lastName + '<br>');
+
+        //Bài 4: Định nghĩa 1 đối tượng tên là car gồm các thuộc tính: hangXe là BMW, gia: 300000 USD, xuatXu ở Đức
+        let car = {
+            hangXe : 'BMW',
+            gia : '300000 USD',
+            xuatXu : 'Đức',
+        }
+
+        //Bài 5: 
+        // thêm thuộc tính màu sắc xe : 'Đen'
+        car.mausac = 'Đen';
+        car.gia = '250000USD';
+        console.log(car);
+
+
+    </script>
+</body>
+</html>

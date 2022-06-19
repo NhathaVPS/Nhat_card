@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>    
+        regular expression : biểu thức chính qui 
+        https://www.tutorialrepublic.com/javascript-tutorial/javascript-regular-expressions.php
+
+        var regex = /^Mr\./;
+        nhập chuỗi Mrabc => true thỏa mãn (tức là biểu thức chính quy định dạng kiểu chuỗi đầu vào theo mẫu có sẵn)
+        nhập chuỗi Arf => false ko thỏa mãn 
+
+        biểu thức chính quy trong js theo cú pháp : /biểu thức chính quy/ 
+        ở ví dụ trên nội dung của Regex là ^Mr\.
+
+        Dấu . trong regex đại diện cho ký tự đơn ngoại trừ dấu xuống dòng mới \n 
+        Tức là dấu . trong ví dụ trên /^Mr\./ có thể là bất cứ ký tự nào 
+
+        dấu ^ có ý nghĩa bắt đầu bằng 1 chuỗi nào đó
+        ví dụ ^p : chuỗi đó bắt đầu bằng p dấu 
+        $ đại diện cho chuỗi kết thúc 
+
+        ví dụ : /^abc def$/
+
+        phân biệt . với lại cú pháp . trong regex khác nhau 
+        phân biệt thêm escape vào trước . 
+
+        Ví dụ: Nhập họ tên với rule phải có 3 từ
+        họ ==> tên đêm ==> tên
+        họ không bắt đầu bằng 1 ký tự đặc biệt hay 1 số mà là 1 chuỗi 
+        tên đêm và tên cũng tương tự như quy tắc họ 
+    </pre> 
+</body>
+
+    <label>Họ tên</label> <!-- thẻ label ko chiếm 1 dòng line -->
+    <input type="text" name="hoten" id="hoten">
+    <button id="kiemtra" >Kiểm Tra</button>
+
+    <script>
+        document.getElementById('kiemtra').onclick = function(){
+
+         
+            var hoten = document.getElementById('hoten').value;
+            var regexHoten = /^[a-z]{2,6} [a-z]{2,6} [a-z]{2,6}$/; //^ là bắt đầu, $ là kết thúc
+            //kiểu chữ đầu vào là [a-z], độ dài từ 2-6
+
+            if(regexHoten.test(hoten)){
+                true
+                return console.log("đúng rồi")
+            }else{
+                return alert("nhập sai rồi")
+            }
+        }
+    </script>
+
+</html>

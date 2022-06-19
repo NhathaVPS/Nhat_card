@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // tạo ra thời gian hiện tại
+        var d = new Date();
+        // lấy các thông số từ biến d này
+
+        // lấy thứ trong tuần và ngày trong tháng 0-6
+        console.log('Ngày trong tháng: ' + d.getDate());   
+        console.log('Ngày trong tuần: ' + d.getDay());    //Kết quả trả về chúng ta tự cộng lên 1 vì nó đếm từ 0
+
+        //Lấy tháng hiện tại 0-11
+        console.log('Lấy tháng: ' + d.getMonth()); //Kết quả trả về chúng ta tự cộng lên 1 vì nó đếm từ 0
+    </script>
+</body>
+</html>

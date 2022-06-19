@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <pre>
+        ví dụ tính tổng các số từ 1 đến 10
+        sum = 1+2+3+...+10
+        dùng document.write() hay alert() để in ra kết quả 
+    </pre>
+    <div>
+        <label>N :</label>
+        <input type="text" name="n" id="n" value="">
+    </div>
+    <div>
+        <label>M :</label>
+        <input type="text" name="m" id="m" value="">
+    </div>
+
+    <div>
+        <button id="calc-sum">Tính tổng các số từ N đến M</button>
+        <button id="calc-mul">Tính tích các số từ N đến M</button>
+        <button id="calc-sum-2">Tính tổng các số chẵn từ N đến M</button>
+    </div>
+
+    <script>
+        var value1 = document.getElementById('n').value;
+        value1 = parseInt(value1);
+        var value2 = document.getElementById('m').value;
+        value2 = parseInt(value2);
+
+        /* function tinhToan(){
+            for (var i=0; i<=value1; i++){
+                for (var j=0; j<=value2; j++){
+                    var sum = i + j;
+                    var ra = alert(sum);
+                }
+            }
+        }
+        document.getElementById("calc-sum").onclick = tinhToan;
+        */
+        
+        function tinhTong(){
+            var arr = new Array();
+            for(var i=value1; i<=value2; i++){  //i chạy từ value1 đến value2
+                /*
+                var j=0 ;           //Mảng chạy từ giá trị bằng 0
+                arr[j] = i;         //Gán giá trị của i vào mảng
+                j++;        */        //Tăng j lên khi giá trị i tăng lên
+                var tong=0;
+                tong = tong + i;    //
+            }
+            document.write('Tổng từ N đến M là: ' + tong);
+             
+        }    
+        var kq = document.getElementById('calc-sum').onclick = tinhTong;
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <pre>
+        BMI = Cân nặng/ Chiều cao*2
+        Trong đó, chiều cao tính bằng m và cân nặng tính bằng kg.
+    </pre>
+    <img src="https://vinmec-prod.s3.amazonaws.com/images/20190515_023453_074691_chi-so-BMI-phan-loa.max-1800x1800.png" alt="">
+
+    <div class="bmi-container">
+
+        <div>
+            <label>Chiều cao ( đơn vị mét ) vd 1.7</label>
+            <input type="text" name="chieucao" id="chieucao" value="">
+        </div>
+        <div>
+            <label>Cân nặng ( kg ) vd 65</label>
+            <input type="text" name="cannang" id="cannang" value="">
+        </div>
+
+        <div>
+            <button id="calc-bmi">Tính BMI</button>
+        </div>
+    </div>
+
+    <p id="bmii">Chỉ số bmi là : </p>
+    <p id="bmi-info">Phân lọai (béo/gầy ....)</p>
+
+    <script>
+        var value1 = document.getElementById('chieucao').value;
+        var value2 = document.getElementById('cannang').value;
+        value1 = parseInt(value1);
+        value2 = parseInt(value2);
+
+        
+        var bmi = value2 / (value1*2);
+        
+
+        function tinhToan(){
+            if(bmi < 18.5){
+                document.getElementsById('bmi-info').innerHTML = "Cân nặng thấp (gầy)";
+                document.getElementsById('bmii').innerHTML = bmi
+            }else if( bmi >= 18.5 && bmi <= 24.9){
+                document.getElementsById('bmi-info').innerHTML = "Bình thường";
+                document.getElementsById('bmii').innerHTML = bmi
+            }else if( bmi >= 25){
+                document.getElementsById('bmi-info').innerHTML = "Thừa Cân";
+                document.getElementsById('bmii').innerHTML = bmi
+            }else if( bmi>25 && bmi<29.9){
+                document.getElementsById('bmi-info').innerHTML = "Tiền Béo Phì";
+                document.getElementsById('bmii').innerHTML = bmi
+            }else if( bmi>=30 && bmi<=34.9 ){
+                document.getElementsById('bmi-info').innerHTML = "Béo Phì Độ I";
+                document.getElementsById('bmii').innerHTML = bmi
+            }else if( bmi>=35 && bmi<=39.9 ){
+                document.getElementsById('bmi-info').innerHTML = "Béo Phì Độ II";
+                document.getElementsById('bmii').innerHTML = bmi
+            }else{
+                document.getElementsById('bmi-info').innerHTML = "Béo Phì Độ III";
+                document.getElementsById('bmii').innerHTML = bmi
+            }
+        }
+
+        document.getElementById('calc-bmi').onclick = tinhToan;
+
+    </script>
+
+</body>
+</html>

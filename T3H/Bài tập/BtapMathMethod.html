@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        https://docs.google.com/document/d/1mZ0bSlr7a3_FtCJ10VWHa9GzkO8NNWn8MyZit4uI1_4/edit
+    </pre>
+
+    <script>
+        /* Bài 7:
+        7.1 tạo ra số random từ 1 - 10, 1-100, 50 - 100
+        7.2 làm tròn số 7.434345 (.round) , làm tròn lên ( .ceil) , làm tròn xuống ( .floor)
+        7.3 lấy sau số thập phân 2 đơn vị :  ví dụ 7.434345 = 7.43
+        7.4 cho string ‘8’ và  ‘5’. Dùng parseInt để tính tổng ( kết quả = 13)
+        7.5 tính 2^10
+        */
+
+        // 7.1 a
+        var number = 7.434345;
+        var random = Math.random(); // Tạo các số ngẫu nhiên từ 0-1
+        console.log((random*10 + (1-random))); // console ra các số từ từ 1 - 10 (nhân 10)
+        // ví dụ random = 0.02*10 + (1-0.02) sẽ ra số lơn hơn 1
+        
+        //7.1 b
+        console.log((random*100 + (1-random)));
+        //7.1 c
+        console.log((random*50 + (1-random))+50);       
+        
+        // 7.2 a
+        var lamtrongRound = Math.round(7.434345) // là tròn số
+        console.log(lamtrongRound);
+        // 7.2 b
+        var lamtrongCeil = Math.ceil(7.434345) // là tròn số lên, mặc dù 7.4 <7.5 vẫn làm tròn lên là 8
+        console.log(lamtrongCeil);
+        var lamtronXuongFloor = Math.floor(7.434345);
+        console.log(lamtronXuongFloor);
+
+        // 7.3 Làm tròn sau số thập phân
+        var lamtronSauthapPhan = number.toFixed(3) // Làm tròn sau số thập phân 3 chữ số
+        console.log(lamtronSauthapPhan); // 7.434
+
+        // 7.5 tính 2^10
+        var hamMuPow = Math.pow(2,10);
+        console.log(hamMuPow);
+
+        /* 
+        Chủ đề date
+        Bài 6:
+        Cho var phucBirthday = ‘26-11-1992’
+        Cho var cuongBirthday= ‘27-11-1994’
+        6.1 Đổi định dạng ngày thành ‘1992-11-26’
+        6.2 Quy đổi về cả 2 về object date
+        6.3 So sánh xem phuc hay cuong lớn tuổi hơn
+        6.4 Hỏi sau 100 ngày từ lúc phucBirthday là ngày hôm nào, thứ mấy?
+        gợi ý: dùng setDate(getDate + 100)
+
+        dùng hàm getDay để tìm ra thứ  biết rằng:
+        0: chủ nhật
+        1: thứ 2  ..
+
+        */
+        var phucBirthday = '26-11-1992';
+        var cuongBirthday= '27-11-1994';
+        // 6.1
+        var birthdayNew = phucBirthday.split('-');
+        document.write(birthdayNew);
+
+    </script>
+</body>
+</html>

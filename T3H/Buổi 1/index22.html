@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        selector lồng nhau
+        ví dụ: 
+        .classA .classB{color:red;} có nghĩa là chọn tất cả các thẻ classB có trong classA 
+
+        biến thể của selector giống nhau 
+        1 - #idA #idB {} chọn thẻ idB nằm trong idA
+        2 - #idB p {} chọn thẻ p trong thẻ có idA 
+        3 - #idA .classB {} chọn thẻ có classB trong idA 
+        4 - div h1 {} chọn thẻ h1 trong thẻ div 
+        5 - .classA #idB {} chọn thẻ idB trong classA 
+        ... 
+    </pre>
+    <div class="classA">
+        <div class="sBclas">div classB</div>
+        <p class="classB">p classB</p>
+    </div>
+
+    <div class="classB">div classB</div>
+    <p class="classB">p classB</p>
+</body>
+</html>

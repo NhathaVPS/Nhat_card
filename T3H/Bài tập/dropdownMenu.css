@@ -1,0 +1,39 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header .menu{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+header .menu li{
+    padding: 8px 16px;
+}
+
+header .menu li:hover{
+    background-color: #EEE; //khi chỉ vào nó sẽ hiện ra background-color 
+}
+
+.tintuc{
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+.listdown{
+    display: none;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    left: 0;
+    top: 100%;
+    background-color: yellowgreen;
+}
+.tintuc:hover .listdown{
+    display: block;  //khi tin tức được hover thì .listdown sẽ hiện ra 
+}
+a{
+   height: 100%;
+   display: block;   
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .highlight {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="info" class="disabled">Something very important!</div>
+    
+    <script>
+    // Selecting element chọn thẻ theo id
+    var elem = document.getElementById("info");
+     
+    // thêm 1 class vào thông qua thuộc tính classList.add()
+    elem.classList.add("hide");  // Add a new class
+    //Thêm nhiều class vào cùng 1 lúc
+    elem.classList.add("note", "highlight");  // Add multiple classes
+    // bỏ đi 1 class
+    elem.classList.remove("hide"); // Remove a class
+    // Bỏ đi nhiều class
+    elem.classList.remove("disabled", "note", "asd"); // Remove multiple classes
+    // Bật tắt class css
+    elem.classList.toggle("visible"); // If class exists remove it, if not add it
+     
+    // Determine if class exist
+    // Xác định xem thẻ đó có chứa css đó hay không? (Ktra xem tồn tại chưa)
+    if(elem.classList.contains("highlight")) {
+        alert("The specified class exists on the element.");
+    }
+    </script>
+</body>
+</html>

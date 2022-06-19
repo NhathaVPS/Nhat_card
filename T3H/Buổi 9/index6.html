@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table,tr,td {
+            border: 1px solid rgb(48, 227, 66);
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        ứng dụng tạo bảng bằng js
+        gợi ý: dùng vòng lặp trong vòng lặp
+    </pre>
+
+
+    <p>
+        Nhập số hàng/dòng của bảng: <input type="text" id="row" name="row"> 
+    </p>
+    <p>
+        Nhập số cột của bảng: <input type="text" id="col" name="col"> 
+    </p>
+    <p>
+        <button id="taobang">Tạo bảng</button>
+    </p>
+    <div id="target" style="border: 3px green; "></div>
+
+    <script>
+
+        document.getElementById("taobang").onclick = function() {
+            
+            var row = document.getElementById("row").value;
+            row = parseInt(row);
+            var col = document.getElementById("col").value;
+            col = parseInt(col);
+
+            alert("hàng" + row + " cột " + col);
+
+            var table = "<table>";
+                table += "<tbody>";
+                    for (var i = 1; i <= row; i++) {
+                        table += "<tr>";
+                            for(var j = 1; j <= col;j++) {
+                                table += "<td>";
+                                table += "Cột " + j + " Dòng" + i;
+                                table += "</td>";
+                            }
+                        table += "</tr>";
+                    } 
+                table += "</tbody>";
+                table += "</table>";
+
+                document.getElementById('target').innerHTML = table;
+        }
+
+        
+    </script>
+</html>

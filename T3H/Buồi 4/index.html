@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            background-color: aquamarine; 
+            /* khai báo flex container */
+            display: flex;
+        }
+        .parent .child {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            padding: 20px;
+            margin: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        https://www.w3schools.com/css/css3_flexbox.asp
+        CSS Flexbox
+        khái niệm 1: flex container (khung chứa bên ngoài chứa các flex items)
+        khái niệm 2: flex item ( con của flex container )
+        với flex container có 1 khai báo 
+        display: flex;
+    </pre>
+
+    <h1>ví dụ 1 flex box</h1>
+
+    <div class="parent">
+        <div class="child">div 1</div>
+        <div class="child">div 2</div>
+        <div class="child">div 3</div>
+    </div>
+</body>
+</html>
+
+<!-- Thuộc tính flex có cha là container.
+tạo thuộc tính cho thẻ cha bằng cách display: flex;
+
+1. flex-direction : sắp xếp các thuộc tính theo chiều mình muốn, mặc định là row 
+
+2. justify-content : dùng để căn chỉnh vị trí các thằng con theo chiều, hướng hiện tại của flex-direction. Mặc định là flex-start
+
+3. align-items : dùng để căn chỉnh các element con theo hướng vuông góc với hướng hiện tại của nó. Ví Dụ: row-column -->
+
+<!-- Thuộc tính Flex áp dụng cho thẻ con nằm trong container
+
+1. flex-basis
+Ví dụ: .child{
+    flex-basis: 150px;
+} tức là thẻ con đó chiếm 150px trên thẻ cha 
+
+2. flex-grow : chỉ được áp dụng khi thẻ mẹ (container) còn chỗ trống.
+Tức là chia phần thừa từ container sang các thẻ con, mặc định là 0(không chia).
+Ví dụ: có 3 thẻ con mà thẻ mẹ thừa 300px, để giá trị flex-grow: 1; cho 3 thẻ thì mỗi thẻ sau khi lưu lại sẽ nhận thêm 100px.
+
+3. flex-shrink : ngược lại với flex-grow, tức là nó sẽ cắt phần thừa của các thẻ con sau đó đắp vào container (nếu độ dài container < tổng thẻ con). Mặc định là 1
+Nó được tính theo công thức: giá trị của flex-basis*(1+1/container - phần thừa ra của thẻ con so với container)
+
+4. flex-order : dùng để thay đổi thứ tự hiển thị của các thẻ con. VD: child ban đầu hiển thị trước nhưng sau đó
+
+5. flex-wrap ; dùng để xuống dòng các thẻ con nếu tổng thẻ con lớn hơn container. Mặc định là nowrap
+-->

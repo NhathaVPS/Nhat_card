@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Chủ đề Scope
+        Bài 1:
+        for(var i = 0; i < 10 ; i++){
+
+        }
+
+        console.log(i)
+
+        Giá trị của i là gì ?
+
+        Bài 2:
+        for(let i = 0; i < 10 ; i++){
+
+        }
+
+        console.log(i)
+
+        Giá trị của i là gì ? Giải thích
+    </pre>
+    <script>
+
+        // i trên là 10
+        // i dưới báo lỗi
+        // do phạm vi của biến let chỉ hoạt động trong thẻ mẹ
+
+
+            //Bài 4: cho
+            const object ={
+                name: 'nodemy',
+            }  
+            // từ khóa const (hằng số), không cho phép gán lại vào biến
+            object["name"] = 'NODEMY' // Nhưng gán lại thuộc tính bên trong object thì được.
+            console.log(object);
+
+            //Bài 5:
+            var persons = [{
+            name: 'Nam',
+            job: 'Dev'
+            }, {
+            name: 'Duong',
+            job: 'Tester'
+            }]
+            //cho 1 array gồm 2 object bên trong gồm các thuộc tính
+
+    </script>
+</body>
+</html>

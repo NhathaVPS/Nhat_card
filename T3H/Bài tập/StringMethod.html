@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fulname = "     Nguyễn Bá Nhật     ";
+
+        document.write(fulname.trim() + "<br>"); //xóa khoảng trắng của kiểu dữ liệu string (xóa 2 đầu)
+
+        document.write(fulname.indexOf("Nguyễn") + "<br>"); //tìm xem chuỗi "Nguyễn" bắt đầu từ vị trí nào
+
+        document.write(fulname.substring(5, 10) + "<br>"); //Lấy ký tự từ ví trí số 5 đến số 10
+
+        document.write(fulname.replace(/Bá/g, 'Hà...') + "<br>"); //thay thế chữ Bá thành chữ Hà
+
+        document.write(fulname.toUpperCase() + "<br>"); //viết hoa toàn bộ chữ cái
+
+        document.write(fulname.toLowerCase() + "<br>"); //viết thường toàn bộ chữ cái
+
+        document.write(fulname.charAt(5) + "<br>");//Lấy chữ cái thứ 5
+        for (let i = 0; i < fulname.length; i++) {
+            document.write(fulname.charAt(i) + "<br>");
+            
+        }
+
+        document.write(fulname.split(" ") + "<br>");
+        //Cắt chuỗi ra theo ký tự khoảng trắng ' ' (cái này hay dùng)
+
+        document.write(fulname.includes("Hà") + '<br>');
+        document.write(fulname.includes("Bá") + '<br>');
+        //Kiểm tra xem chuỗi đó có tồn tại hay không?
+
+    </script>
+</body>
+</html>

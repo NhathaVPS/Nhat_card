@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        thẻ input có type="email" ..... thẻ này dùng để nhập email 
+        thẻ radio nếu cùng tên thì chỉ chọn được 1 trong các option của nó 
+        thẻ radio muốn chọn trước option nào thì thêm thuộc tính "checked" vào trong thẻ input đó 
+    </pre>
+    <form action="">
+        <div>
+            <label for="">Email </label>
+            <input type="email" name="thư điện tử">
+        </div>
+        <div>
+            <label for="">Giới tính</label>
+            <input type="radio" name="giới tính" checked>Nam
+            <input type="radio" name="giới tính">Nữ
+        </div>
+        <div>
+            <label for="">Nguồn tuyển sinh</label>
+            <input type="radio" name="tuyển sinh" value="1"> Thi THPT
+            <input type="radio" name="tuyển sinh" value="2"> Bỏ học 
+            <input type="radio" name="tuyển sinh" value="3" checked> Bố nó giàu 
+        </div>
+    </form>
+</body>
+</html>

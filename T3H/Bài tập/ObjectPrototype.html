@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Objec tPrototype (đối tượng nguyên mẫu)
+        Dùng để thêm thuộc tính cho ObjectConstructor sau khi tạo 
+        Cú pháp: Tên hàm.prototype.thuộc tính mới
+    </pre>
+
+    <script>
+
+        function Fullname(firtsname, lastname, height) {  //Quy ước chung là viết hoa chữ cái đầu của tên hàm
+            this.firtsname = firtsname;
+            this.lastname = lastname;
+            this.height = height;
+            this.traVe = function(){            //function gọi là phương thức
+                var kq = console.log(this.firtsname + " " + this.height + " Trả về Họ + Cao: ");
+                return kq;
+            }
+        }
+
+        var baNhat = new Fullname("Nguyễn Bá", "Nhật", 170);
+        console.log(baNhat);
+        let thuHa = new Fullname('Thu', 'Hà', 165);
+        console.log(thuHa);
+        console.log(baNhat.traVe());
+        baNhat.title = 'Đẳng cấp trade forex';
+        thuHa.comment = 'Người yêu Nhật';
+
+        //thêm thuộc tính cho hàm Fullname
+        Fullname.prototype.newProperty = 'Thuộc tính mới';
+
+        //thêm phương thức vào thuộc tính vừa tạo
+        Fullname.prototype.newProperty2 = function() {
+            return document.write(this.lastname + ' cao ' + this.height + ' cm');
+        }
+
+        //truy cập vào thuộc tính mới in ra màn hình conso cho dễ hiểu
+        console.log(baNhat.newProperty);
+        console.log(baNhat.newProperty2());
+        
+
+    </script>
+</body>
+</html>

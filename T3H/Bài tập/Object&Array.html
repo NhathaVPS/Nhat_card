@@ -1,0 +1,45 @@
+// Kiểu object và array (Reference)
+
+/* object dùng để miêu tả 1 đối tượng nào đó có nhiều thuộc tính khác nhau.
+Ví dụ: con người có màu tóc, màu da, chiều cao,..
+*/
+// Để khai báo 1 object dùng 
+// var a = { key : value (khai báo thuộc tính của nó) };
+
+//VD: khai báo người yêu của bạn
+var ThuHa = {
+  ten : 'Hà', //string
+  nang : 50, //kiểu number
+  chieu_cao : '165cm', //string
+  con_yeu_khong : true //bol
+};
+ThuHa.nang = 48; // thay đổi thuộc tính
+console.log(ThuHa.nang); // gọi ra màn hình console
+console.log(ThuHa['ten']);
+
+var BaNhat = {
+  ten : 'Nhật', //string
+  nang : 65, //kiểu number
+  chieu_cao : '170cm', //string
+  con_yeu_khong : true //bol
+};
+
+
+/*
+  Array trong thực tế thường được dùng để lưu trữ 1 danh sách nào đó
+  Cú pháp: 
+  var myArray = [1, 2, 3, 4, 5];
+  or
+  var myArray = new Array(1, 2, 3, 4, 5);
+*/
+//VD1:
+var myArray = new Array(ThuHa, BaNhat);
+console.log(myArray[0].chieu_cao);
+//VD2:
+var danhsach = [
+  {name : 'thắng', SDT : 01283189784},
+  {name : 'Nam', SDT : 12983798248},
+];
+console.log(danhsach[1].SDT);
+
+// bài tập: tạo danh sách các nhân viên sử dụng kiểu 1 array các object

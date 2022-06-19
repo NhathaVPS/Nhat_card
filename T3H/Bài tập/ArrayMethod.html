@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr = [3,2,5,6,8,9];
+        //thêm 1 phần tử vào mảng (push)
+        arr.push(10); //Lưu ý là ngoặc () chứ không phải []
+        console.log(arr);
+
+        //xóa đi phần tử cuối của mảng và trả về ptu xóa đó (pop)
+        var newPop = arr.pop();
+        console.log(newPop);
+
+        //cắt phần tử từ vị trí a --> b (slice)
+        var newSlice = arr.slice(0, 3);
+        console.log(newSlice);
+
+        //sắp xếp các số trong mảng theo thứ tự nào đó (sort)
+        var newSort = arr.sort(function(item1, item2){
+            if(item1 > item2){
+                return 1
+            }
+            if(item1 < item2){
+                return -1
+            }
+            if(item1 == item2){
+                return 0
+            }
+        })
+        console.log(newSort);
+
+        //thêm hoặc xóa phần tử từ vị trí bất kỳ và trả về phần tử đó (splice) 
+        var newSplice = arr.splice(2,1, "thêm phần tử vào bên trái của ptu được chọn"); //2 là vị trí phần tử được chọn, 1 là: từ phần tử được chọn đó xóa sang bên phải 1 phần tử 
+        console.log(newSplice); //trả về phần tử xóa
+        console.log(arr); //in ra mảng khi đã bị xóa phần tử trên
+
+        //Tách từng phần tử của mảng ra như biến độc lập
+        var newMap = arr.map(function(item){ //truyền tất cả phần tử vừa tách vào hàm có biến item
+            return item*2; //trả về kết quả từng phần tử được nhân 2
+        })
+        console.log(newMap); //trả ra [4, 6, NaN, 12, 16, 18]
+
+        //Hàm lặp trả về MẢNG theo điều kiện (filter)
+        var newFilter = arr.filter(function(item){
+            return item > 5; //tìm các số lớn hơn 5
+        });
+        console.log(newFilter);
+
+        //Hàm tìm kiếm (find)
+        var newFind = arr.find(function(item){
+            return item > 5; //tìm và trả về phần tử đầu tiên tìm thấy
+        });
+        console.log(newFind);
+
+        
+    </script>
+
+</body>
+</html>

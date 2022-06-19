@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* root */
+        html {
+            font-size: 15px;
+        }
+
+        .parent {
+            font-size: 25px;
+        }
+
+        .parent .child {
+            font-size: 2rem; //kết quả bằng 30px (bằng 2 lần thẻ html)
+            //thẻ này không phụ thuộc thẻ cha là .paren:25px 
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        đơn vị rem 
+        không phụ vào thẻ cha mà nó phụ vào thẻ gốc thường là thẻ html
+    </pre>
+    <hr>
+    <div class="parent">
+        <div class="child">demo rem không mặc định phụ thuộc vào thẻ gốc html</div>
+    </div>
+
+
+
+</body>
+</html>

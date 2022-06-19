@@ -1,0 +1,59 @@
+Có thẻ HTML bao ngài ( gõ chấm than là ra)
+Bên trong có thẻ head - thẻ thiết lập chung cho giao diện
+Body - là phần để thiết kế giao diện
+Thẻ mở - <tên>
+Thẻ đóng - </tên>
+
+Title - quy định tên của tab trình duyệt
+Link - Lấy dữ liệu từ link bên ngoài vào giao diện 
+    Để thêm icon lên trên tab trình duyệt chọn link favicon
+        Các thuộc tính nằm trong thẻ mở gọi là attribute
+        href là các attribute để dẫn link nguồn
+        Link online là copy link trên web về dùng
+        Link tuyệt đối - link dẫn từ máy tính mình ra
+                        ghép giữa địa chỉ thư mục, tên file và định dạng file
+        Link tương đối là link dãn từ thư mục của file đang code
+                        Dùng ./ lấy file cùng thư mục
+                        ../ là thoát khỏi file hiện tại ( đi lên 1 lever )
+
+
+=================================================
+Phần Body
+    H - thẻ để viết tiêu đề
+        Làm chữ to lên đậm lên và chiếm hết dòng trên giao diện 
+
+    P - Thẻ đoạn văn 
+        chiếm hết dòng trên giao diện
+    Br - Thẻ này dùng để ngắt xuống dòng
+    b / i / u  -  chữ đậm / nghiêng / gạch chân
+    Span  -  thẻ viết text hỗ trợ thuộc tính về sau
+
+Các thẻ trong HTML có tính kế thừa
+
+=================================================
+img -  thẻ chèn ảnh
+        src - thuộc tính để dẫn nguồn ảnh
+        alt - là thuộc tính hiển thị chữ thay thế khi ảnh lỗi
+
+a-link   -   Gán mốc địa chỉ, ấn vào đó sẽ đưa mình đến địa chỉ được gán mốc
+a-blank   -  Giống với a-link nhưng nó sẽ mở địa chỉ trên tab mới
+a-mail      -   ....... mở ứng dụng mail
+
+
+=================================================
+input           thu thập thông tin người Dùng
+      -   text : Nhập nội dung ngắn trên 1 dòng duy nhất
+      -   textarea: Nhập nội dung dài trên nhiều dòng (cái này là thẻ riêng chứ không trong input)
+      -   passwork: Ẩn nội dung nhập
+      -   date - Chọn ngày
+      -   datetime-local : chọn ngày giờ
+      -   flie mutable : thêm nhiều file cùng lúc
+      -   Checkbox : trắc nghiệm, có thể chọn 1 hoặc nhiều hoặc hủy chọn
+      -   Radio    : Trắc nghiệm, chỉ chọn 1 đáp án, các ô radio sét chung name để sử dụng
+      -   Select : Bên trong là option dùng để tạo lựa chọn giống như quận huyện (cái này là thẻ riêng chứ không trong input)
+Bottom      thẻ tạo nút
+            botton nằm trong form thì khi click bottom nó sẽ tải lại trang
+    Type='button' button không gửi form nữa
+
+====================================
+img width - chọn thông số to nhỏ hiển thị ảnh    

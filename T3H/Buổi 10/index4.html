@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Cú pháp chọn theo tên thẻ 
+    </pre>
+
+    <section>thẻ sectinon số 1</section>
+    <section>thẻ sectinon số 2</section>
+
+    <p>Thẻ p thứ 1</p>
+    <p>Thẻ p thứ 2</p>
+
+    <script>
+        //Chọn theo tên thẻ vẫn trả về HTMLCollection tương tự như khi chọn thẻ theo className
+        var section = document.getElementsByTagName('section');
+
+        section[0].style.fontSize = '30px';
+        section[0].style.color = 'pink';
+
+        section[1].style.color = 'green';
+        section[1].style.fontSize = '45px';
+
+        //Chọn thẻ mà không gán vào biến
+        document.getElementsByTagName('p')[1].style.fontSize = '50px';
+        document.getElementsByTagName('p')[0].style.backgroundColor = 'Green';
+        document.getElementsByTagName('p')[0].style.backgroundImage = 'url("https://scontent.fhan15-2.fna.fbcdn.net/v/t39.30808-6/283683908_1773340886382879_3353754340695609202_n.png?_nc_cat=1&ccb=1-7&_nc_sid=730e14&_nc_ohc=JqLLJt6siAwAX9fl1-R&_nc_ht=scontent.fhan15-2.fna&oh=00_AT9vV5RmqoC6Jh6KaN-S7HAzMJP2H3Hxob4KQqgnSLpbOQ&oe=629E6C9E")'
+
+    </script>
+
+</body>
+</html>

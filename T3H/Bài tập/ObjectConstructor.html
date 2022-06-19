@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Object constructor sử dụng giống lập trình hướng đối tượng, nó bao gồm thuộc tính và phương thức
+        Tức là tạo ra các điểm chung để dễ dàng truy cập và quản lý hơn 
+    </pre>
+
+    <script>
+
+        function Fullname(firtsname, lastname, height) {
+            this.firtsname = firtsname;
+            this.lastname = lastname;
+            this.height = height;
+            this.traVe = function(){            //function gọi là phương thức
+                var kq = console.log(this.firtsname + " " + this.height + " Trả về Họ + Cao: ");
+                return kq;
+            }
+        }
+
+        var baNhat = new Fullname("Nguyễn Bá", "Nhật", 170);
+        console.log(baNhat);
+        let thuHa = new Fullname('Thu', 'Hà', 165);
+        console.log(thuHa);
+        console.log(baNhat.traVe());
+        baNhat.title = 'Đẳng cấp trade forex';
+        thuHa.comment = 'Người yêu Nhật';
+
+    </script>
+</body>
+</html>

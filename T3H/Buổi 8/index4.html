@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+
+    </pre>
+
+    <input type="text" id="input1">
+
+    <button id="control1">In ra kết quả</button>
+
+    <p id="inner1" style="color:green;"></p>
+
+    <script>
+        function tinhtoan(){ 
+            var age = document.getElementById('input1').value;
+            age = parseInt(age); //chuyển sang kiểu số nguyên
+
+            // ví dụ viết nhiều else-if
+            if(){age == ""
+
+            }else if(age >=19 && age < 23){
+                document.getElementById('inner1').innerHTML = "sinh viên";
+            }else if(age >=16 && age < 19){
+                document.getElementById('inner1').innerHTML = "học sinh";
+            }else if( age >=11 && age < 16){
+                document.getElementById('inner1').innerHTML = "học sinh THCS";
+            }else if( age >=6 && age < 11){
+                document.getElementById('inner1').innerHTML = "học sinh tiểu học";
+            }else if(age < 6){
+                document.getElementById('inner1').innerHTML = "học sinh tiểu học";
+            }else{
+                document.getElementById('inner1').innerHTML = "tuổi lao động";
+            }
+        }
+        document.getElementById("control1").onclick = tinhtoan;
+    </script>
+</body>
+</html>

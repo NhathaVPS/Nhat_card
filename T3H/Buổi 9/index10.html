@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        hàm thông thường và hàm vô danh 
+    </pre>
+
+    <script>
+        function tinhBMI(chieu_cao, can_nang){
+            var BMI = can_nang / (chieu_cao*2);
+            return BMI;
+        }
+        var kq = tinhBMI(165, 50);
+        document.write('Kết quả là: ' + kq);
+
+        // hàm vô danh gắn cho 1 biến
+        var xinChao = function(ten = 'Nhật'){
+            return "<p>Xin chào: " + ten + "</p>"
+        }
+        var chua_gan_gtri = xinChao(); //không truyền đối số (đối số mặc định)
+        var gan_gtri = xinChao("Hà");  //truyền đối số vào
+        document.write(chua_gan_gtri);
+        document.write(gan_gtri);
+    </script>
+</body>
+</html>
